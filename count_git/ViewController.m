@@ -16,12 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    number = 0 ;
+    label.text = [NSString stringWithFormat:@"%d",number] ;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)plus{
+    
+    number += 1 ;
+    label.text = [NSString stringWithFormat:@"%d",number] ;
+    
+    if(number >= 10){
+        
+        label.textColor = [UIColor blueColor] ;
+        
+    }
+        
 }
 
 @end
